@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel ❤️ Fernanda</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fff5f7;
+    color:#333;
+    text-align:center;
+}
+
+header{
+    background:linear-gradient(135deg,#ff6b81,#ff8fa3);
+    color:white;
+    padding:50px 20px;
+}
+
+h1{
+    margin:0;
+    font-size:3em;
+}
+
+section{
+    padding:30px 20px;
+}
+
+img{
+    width:90%;
+    max-width:400px;
+    border-radius:20px;
+    margin:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.botao{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+#surpresa{
+    display:none;
+    margin-top:30px;
+    font-size:22px;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+.carta{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    text-align:left;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Gabriel ❤️ Fernanda</h1>
+    <p>5 anos de amizade • 3 meses de amor</p>
+</header>
+
+<section>
+    <h2>Nosso Amor</h2>
+    <p>
+        Antes do namoro, veio a amizade.
+        Antes dos planos, veio a confiança.
+        Antes de tudo, Deus escreveu nossa história.
+    </p>
+</section> 
+
+<audio controls loop>
+    <source src="audio/musica.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+    <h2>Nossas Memórias</h2>
+
+ <div class="galeria">
+    <img src="img/foto1.jpg">
+    <img src="img/foto2.jpg">
+    <img src="img/foto3.jpg">
+    <img src="img/foto4.jpg">
+    <img src="img/foto5.jpg">
+    <img src="img/foto6.jpg">
+    <img src="img/foto7.jpg">
+    <img src="img/foto8.jpg">
+    <img src="img/foto9.jpg">
+    </div>
+</section>
+
+<section>
+    <h2>Há quanto tempo estamos escrevendo nossa história ❤️</h2>
+    <h3 id="contador"></h3>
+</section>
+
+<section>
+    <h2>Uma Carta Para Você</h2>
+
+    <div class="carta">
+
+        <p>Oi, meu amor.</p>
+
+        <p>
+        Durante 5 anos fomos amigos.
+        Compartilhamos momentos, histórias e risadas.
+        E então, há 3 meses, Deus transformou nossa amizade
+        em algo ainda mais bonito.
+        </p>
+
+        <p>
+        Você se tornou a pessoa que eu mais gosto de encontrar,
+        a companhia que faz qualquer lugar parecer especial.
+        </p>
+
+        <p>
+        O que mais amo em nós é que nossa história foi construída
+        sobre amizade, confiança e propósito.
+        </p>
+
+        <p>
+        Você me inspira a ser um homem melhor todos os dias.
+        </p>
+
+        <p>
+        Obrigado pelos 5 anos de amizade.
+        Obrigado pelos 3 meses de namoro.
+        Obrigado por ser você.
+        </p>
+
+        <p>
+        Eu te amo. ❤️
+        </p>
+
+        <p>
+        Com amor,<br>
+        Gabriel
+        </p>
+
+    </div>
+
+    <button class="botao" onclick="mostrarSurpresa()">
+        Clique apenas se me amar ❤️
+    </button>
+
+    <div id="surpresa">
+        Fernanda, eu escolheria você em cada versão da minha vida. ❤️
+    </div>
+</section>
+
+<script>
+
+const dataInicio = new Date(2026, 4, 17);
+
+function atualizarContador(){
+
+    const hoje = new Date();
+
+    let meses = hoje.getMonth() - dataInicio.getMonth();
+    let dias = hoje.getDate() - dataInicio.getDate();
+
+    if(dias < 0){
+        meses--;
+
+        const mesAnterior = new Date(
+            hoje.getFullYear(),
+            hoje.getMonth(),
+            0
+        );
+
+        dias += mesAnterior.getDate();
+    }
+
+    document.getElementById("contador").innerHTML =
+        meses + " meses e " + dias + " dias juntos ❤️";
+}
+
+atualizarContador();
+
+
+function mostrarSurpresa(){
+
+    document.getElementById("surpresa").style.display="block";
+
+}
+
+</script>
+
+<body>
+
+<header>
+    <h1>Gabriel ❤️ Fernanda</h1>
+    <p>5 anos de amizade • 3 meses de amor</p>
+</header>
+
+<section>
+    <h2>Nosso Amor</h2>
+</html>
